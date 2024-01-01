@@ -8,10 +8,14 @@
 <body style="color: #444; margin:0;font: normal 14px/20px Arial, Helvetica, sans-serif; height:100%; background-color: #fff;">
 <div style="height:auto; min-height:100%; ">     <div style="text-align: center; width:800px; margin-left: -400px; position:absolute; top: 30%; left:50%;">
 <p id="take_your_time"></p>
-<script>
-const d = new Date();
-document.getElementById("take_your_time").innerHTML = d;
+
+<script type="application/javascript">
+  function getIP(json) {
+    document.write("My public IP address is: ", json.ip);
+  }
 </script>
+
+<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
         <h1 style="margin:0; font-size:150px; line-height:150px; font-weight:bold;">403</h1>
 <h2 style="margin-top:20px;font-size: 30px;">Forbidden
 </h2>
