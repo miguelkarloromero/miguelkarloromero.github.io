@@ -12,15 +12,13 @@
 <h1 style="margin:0; font-size:150px; line-height:150px; font-weight:bold;">503</h1>
 <h2 style="margin-top:20px; font-size: 30px;">Service Temporarily Unavailable</h2>
 <p>Please Visit Again Later!</p>
-<p id="ipv4"></p>
-
 <script type="application/javascript">
   function getIP(json) {
     document.getElementById("ipv4").innerHTML = document.write("Your public IP address is: ", json.ip);
   }
 </script>
-
 <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+<p id="ipv4"></p>
 </div>
 </div>
 </body>
