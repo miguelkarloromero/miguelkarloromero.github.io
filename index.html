@@ -16,8 +16,45 @@
     <header class="mx-auto pt-10 lg:pt-6 lg:px-8 w-240 lg:w-full mb-8"> 
      <h1 class="inline-block sm:block sm:mb-2 font-light text-60 lg:text-4xl text-black-dark leading-tight mr-2"> <span class="inline-block">Service Unavailable</span> <span class="code-label">Error code 503</span> </h1> 
      <div class="mt-3">
+      <style>
+       /* GLOBAL STYLES */
+body {
+  background: #333;
+  padding-top: 5em;
+  display: flex;
+  justify-content: center;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.animation h1 {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+      </style>
+      <h1 class="animation" id="ipv4"></h1>
       <script type="application/javascript">
   function getIP(json) {
+   let element = document.getElementById("ipv4");
    document.write("Your public IP address is: ", json.ip);
   }
 </script>
