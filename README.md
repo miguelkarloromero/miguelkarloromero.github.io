@@ -1,1 +1,1 @@
-![](https://komarev.com/ghpvc/?username=miguelkarloromero&base=299792458)
+![](https://github.com/miguelkarloromero/miguelkarloromero.github.io/main/servervisits.svg)
