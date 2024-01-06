@@ -8,19 +8,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge"> 
   <meta name="robots" content="noindex, nofollow"> 
   <meta name="viewport" content="width=device-width,initial-scale=1"> 
-  <link rel="icon" type="image/x-icon" href="/fluidicon.png"> 
-  
-  <!-- loading optimization -->
-  <link rel="preload" href="/assets/animation/animation.gif" as="image" crossorigin="anonymous">
-  <link rel="preload" href="https://api.ipify.org?format=jsonp&callback=getIP" as="fetch" type="application/javascript" crossorigin="anonymous"> 
-  
+  <link rel="icon" type="image/x-icon" href="/fluidicon.png">   
   <script type="application/javascript">
    function getIP(json) {
-    document.write("<p>Your public IP address is: <a href=\"#\" style=\"color: #00ff0f; text-decoration: none;\" onContextMenu=\"return false;\">" + json.ip + "</a></p>");
+    document.write("<p style=\"color: #093b3b;\">Your public IP address is: <a href=\"#\" style=\"color: #23a6a6; text-decoration: none;\" onContextMenu=\"return false;\">" + json.ip + "</a></p>");
    }
   </script>
   <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
-  
  </head> 
  <body onload="getIP()"> 
   <img src="/assets/animation/animation.gif" style="max-width: 100%; height: auto;" alt="#" onContextMenu="return false;"></img>
