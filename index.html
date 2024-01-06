@@ -17,13 +17,13 @@
   </style>
   <script type="application/javascript">
    function getIP(json) {
-    document.write("<p style=\"color: #093b3b; padding-top: 20px;\">Your public IP address is: <a href=\"https://www.google.com/\" style=\"color: #23a6a6; text-decoration: none;\">" + json.ip + "</a></p>");
+    document.write("<p style=\"color: #093b3b; padding-top: 20px;\">Your public IP address is: <a href=\"https://www.google.com/\" style=\"color: #23a6a6; text-decoration: none;\" onContextMenu=\"return false;\">" + json.ip + "</a></p>");
    }
   </script>
   <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
  </head> 
  <body onload="getIP()"> 
-  <p style="color: #093b3b;">Coded by <a href="" style="text-decoration: none;">Miguel Karlo Romero.</p>
+  <p style="color: #093b3b;">Coded by <a href="#" style="color: 23a6a6; text-decoration: none;" onContextMenu="return false;">Miguel Karlo Romero.</p>
   <p style="color: #093b3b;">This is just a Hobby Project.</p>
   <img src="/assets/animation/animation.gif" style="max-width: 100%; height: auto;" alt="#" onContextMenu="return false;"></img>
  </body>
