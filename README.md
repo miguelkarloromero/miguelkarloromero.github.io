@@ -1,1 +1,1 @@
-![](https://github.com/miguelkarloromero/miguelkarloromero.github.io/main/servervisits.svg)
+<img src="https://github.com/miguelkarloromero/miguelkarloromero.github.io/servervisit.svg"></img>
