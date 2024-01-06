@@ -6,10 +6,10 @@
     <mask id="a">
         <rect width="163.2" height="20" rx="3" fill="#fff"/>
     </mask>
-    <g mask="url(a)">
+    <g mask="url(#a)">
         <rect width="81.2" height="20" fill="#017701"/>
         <rect x="81.2" width="82" height="20" fill="#010177"/>
-        <rect width="163.2" height="20" fill="url(b)"/>
+        <rect width="163.2" height="20" fill="url(#b)"/>
     </g>
     <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
         <text x="41.6" y="14">Server Visits</text>
