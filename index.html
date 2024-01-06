@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
- <!--<![endif]-->
+ <![endif]-->
  <head> 
   <title>Do not display</title> 
   <meta charset="UTF-8"> 
@@ -12,10 +12,9 @@
  <body> 
   <script type="application/javascript">
    function getIP(json) {
-    document.write("<h1>Your public IP address is: " + json.ip + "</h1>");
+    document.write("<h1 style="text-align: center; font-size: 1em;">Your public IP address is: " + json.ip + "</h1>");
    }
   </script>
   <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
-  <script type="application/javascript" src="http://ip-api.com/json/"></script>
  </body>
 </html>
