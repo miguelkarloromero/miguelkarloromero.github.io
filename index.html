@@ -8,11 +8,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge"> 
   <meta name="robots" content="noindex, nofollow"> 
   <meta name="viewport" content="width=device-width,initial-scale=1"> 
+  <link rel="preload" as="image" href="/assets/animation/animation.gif">
  </head> 
  <body> 
+  <div id="ipv4"></div>
   <script type="application/javascript">
    function getIP(json) {
-    document.write("<h1 style=\"text-align: center; font-size: 1em;\">Your public IP address is: " + json.ip + "</h1><h1 style=\"text-align: center; font-size: 1em;\">Due to Hacking Activy by Miguel Karlo Romero</h1>");
+    document.getElementById("ipv4").document.write("Your public IP address is: " + json.ip);
    }
   </script>
   <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
