@@ -2,20 +2,21 @@
 <html lang="en-US">
  <!--<![endif]-->
  <head> 
-  <title>Public IP</title> 
+  <title>Public IP Tool</title> 
   <meta charset="UTF-8"> 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
   <meta http-equiv="X-UA-Compatible" content="IE=Edge"> 
   <meta name="robots" content="noindex, nofollow"> 
   <meta name="viewport" content="width=device-width,initial-scale=1"> 
   <link rel="icon" type="image/x-icon" href="/fluidicon.png"> 
+  
   <!-- loading optimization -->
   <link rel="preload" href="/assets/animation/animation.gif" as="image" crossorigin="anonymous">
   <link rel="preload" href="https://api.ipify.org?format=jsonp&callback=getIP" as="fetch" type="application/javascript" crossorigin="anonymous"> 
   
   <script type="application/javascript">
    function getIP(json) {
-    document.write("<h1>Your public IP address is: " + json.ip + "</h1>");
+    document.write("<p>Your public IP address is: " + json.ip + "</p>");
    }
   </script>
   <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
