@@ -8,7 +8,7 @@
     </mask>
     <g mask="url(#a)">
         <rect width="81.2" height="20" fill="#018f01"/>
-        <rect x="81.2" width="82" height="20" fill="#01018f"/>
+        <rect x="81.2" width="82" height="20" fill="#010177"/>
         <rect width="163.2" height="20" fill="url(#b)"/>
     </g>
     <g fill="#000" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
