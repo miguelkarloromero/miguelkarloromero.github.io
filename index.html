@@ -1,28 +1,30 @@
-<!DOCTYPE html>
-<html lang="en-US">
- <!--<![endif]-->
+<!DOCTYPE html> 
+<html lang="en-US"> 
+ <!--<![endif]--> 
  <head> 
   <title>Internet Protocol Version 4</title> 
   <meta charset="UTF-8"> 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
   <meta http-equiv="X-UA-Compatible" content="IE=Edge"> 
   <meta name="robots" content="noindex, nofollow"> 
-  <meta name="viewport" content="width=device-width,initial-scale=1"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"> 
   <link rel="icon" type="image/x-icon" href="/assets/images/fluidicon.png"> 
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"> 
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Ubuntu"> 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu"> 
   <style>
    body {
     font-family: 'Ubuntu';font-size: 20px;
    }
-  </style>
-  <script type="application/javascript">
+  </style> 
+  <script type="application/javascript"> 
    function getIP(json) {
-    document.write("<p style=\"color: #093b3b; padding-top: 20px;\">Your public IP address is <a href=\"https://whatismyipaddress.com/ip/" + json.ip + "\" style=\"color: #23a6a6; text-decoration: none;\" onContextMenu=\"return false;\">" + json.ip + "</a><p style=\"color: #093b3b;\">Coded by <a href=\"#\" style=\"color: #23a6a6; text-decoration: none;\" onContextMenu=\"return false;\">Miguel Karlo Romero</a><p style=\"color: #093b3b; font-size: 15px;\">Website created on Dec/15/2023 at 2:38 AM</p></p></p>");
+    document.write("<p style=\"color: #093b3b; padding-top: 20px;\">Your public IP address is <a href=\"https://whatismyipaddress.com/ip/" + json.ip + "\" style=\"color: #23a6a6; text-decoration: none;\" onContextMenu=\"return false;\">" + json.ip + "</a><p style=\"color: #093b3b;\">Coded by <a href=\"#\" style=\"color: #23a6a6; text-decoration: none;\" onContextMenu=\"return false;\">Miguel Karlo Romero</a><p style=\"color: #093b3b; font-size: 15px;\">Website created on Dec/15/2019 at 2:38 AM</p></p></p>");
    }
-  </script>
+  </script> 
   <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
  </head> 
- <body onload="getIP()">
-  <img src="/assets/animation/animation.gif" style="max-width: 100%; height: auto;" alt="#" onContextMenu="return false;"></img>
- </body>
-</html>
+ <body onload="getIP()"> 
+  <img src="/assets/animation/animation.gif" style="max-width: 100%; height: auto;" alt="#" onContextMenu="return false;"></img> 
+ </body> 
+</html> 
