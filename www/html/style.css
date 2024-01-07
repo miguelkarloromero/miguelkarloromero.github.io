@@ -8,8 +8,6 @@ body {
 .text {
 	text-align: center;
 	color: #00ff00;
-	padding-top: 100%;
-	padding-bottom: 100%;
 	overflow: hidden;
 	border-right: .1em;
 	white-space: nowrap;
