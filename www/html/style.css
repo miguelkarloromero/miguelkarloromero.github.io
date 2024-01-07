@@ -1,0 +1,26 @@
+body {
+	font-family: 'Ubuntu';
+	font-size: 6vw;
+	display: block;
+	background-color: #040324;
+}
+
+.text {
+	text-align: center;
+	color: #00ff00;
+	padding-top: 100%;
+	padding-bottom: 100%;
+	overflow: hidden;
+	border-right: .1em;
+	white-space: nowrap;
+	margin: 0;
+	animation:
+	typing 6s steps(70, end);
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+  from, to { color: #ff0000; }
+  100% { color: #0000ff; }
+}
