@@ -3,7 +3,27 @@
   <head>
     <title>codec</title>
   <style>
-    
+    #thefile {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+}
+
+#canvas {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+audio {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  width: calc(100% - 20px);
+}
   </style>
   </head>
   <body>
@@ -11,11 +31,7 @@
   <input type="file" id="thefile" accept="audio/*" />
   <canvas id="canvas"></canvas>
   <audio id="audio" loop></audio>
-  <script type="application/javascript">   
-  </script>
-    </div>
-    </body>
-    </html>
+  <script type="application/javascript">
 window.onload = function() {
   
   var file = document.getElementById("thefile");
@@ -80,3 +96,7 @@ window.onload = function() {
     renderFrame();
   };
 };
+  </script>
+</div>
+</body>
+</html>
