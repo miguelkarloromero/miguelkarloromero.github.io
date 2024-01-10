@@ -1,4 +1,3 @@
-<p><img src="/assets/images/fluidicon.png" style="padding;width: 5%; vertical-align:middle;margin:50px 0px" alt="github-logo"></img>
-I'm using github server</p>
-<div />
-<img src="/assets/svg/servervisit.svg"></img>
+> - ### This is the webpage file are stored!
+> - ### Created on December 2023!
+> - ### Design Version 1
