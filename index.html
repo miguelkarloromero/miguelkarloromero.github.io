@@ -47,7 +47,7 @@ body {
 			<center id="continue">Linux System</center>
 		</h1>
 		<div id="code">
-			<pre><code><span class="orange">cat </span>&lt&lt<span class="green">EOF &gt programmer&#45log&#46txt</span><br /><span class="green">EAT</span><br /><span class="green">CODE</span><br /><span class="green">LESS SLEEP</span><br /><span class="green">REPEAT</span><br /><span class="green">EOF</span><br /><br /><br /><span class="proto">robot hackers</span><br />botnets ipv4: <span class="iso-green" id="ipvx1"></span>&#46<span class="iso-green" id="ipvx2"></span>&#46<span class="iso-green" id="ipvx3"></span>&#46<span class="iso-green" id="ipvx4"></span></br ><span class="iso-green" id="ports"></span><br />type: <span class="iso-green">attack on command</span><br />fast flux: <span class="iso-green">true<br />page created: <span class="iso-green">june</span>/<span class="iso-green">14</span>/<span class="iso-green">2022</span><br />page visits: <span class="iso-green">1,000+</span></code></pre>
+			<pre><code><span class="orange">cat </span>&lt&lt<span class="green">EOF &gt programmer&#45log&#46txt</span><br /><span class="green">EAT</span><br /><span class="green">CODE</span><br /><span class="green">LESS SLEEP</span><br /><span class="green">REPEAT</span><br /><span class="green">EOF</span><br /><br /><br /><span class="proto">robot hackers</span><br />botnets ipv4: <span class="iso-green" id="ipvx1"></span>&#46<span class="iso-green" id="ipvx2"></span>&#46<span class="iso-green" id="ipvx3"></span>&#46<span class="iso-green" id="ipvx4"></span></br >domain changed ip: <span class="iso-green" id="dns-flux"></span><br />type: <span class="iso-green">attack on command</span><br />fast flux: <span class="iso-green">true<br />page created: <span class="iso-green">june</span>/<span class="iso-green">14</span>/<span class="iso-green">2022</span><br />page visits: <span class="iso-green">1,000+</span></code></pre>
 		</div>
 		<script type="application/javascript">
 			let ipvx1 = Math.floor((Math.random() * 255) + 1);
@@ -58,8 +58,8 @@ body {
 			document.getElementById("ipvx3").innerHTML = ipvx3;
 			let ipvx4 = Math.floor((Math.random() * 255) + 1);
 			document.getElementById("ipvx4").innerHTML = ipvx4;
-			let x = Math.floor((Math.random() * 65535) + 1);
-			document.getElementById("ports").innerHTML = x;
+			let x = Math.floor((Math.random() * 4096) + 1);
+			document.getElementById("dns-flux").innerHTML = x;
 			setTimeout(function(){
 				location.reload();}, 1000);
 		</script>
