@@ -66,7 +66,7 @@ body {
 			let x = Math.floor((Math.random() * 4096) + 1);
 			document.getElementById("active-bots").innerHTML = x;
 			function loadDoc() {
-				sleep(500);
+				await sleep(500);
 				const xhttp = new XMLHttpRequest();
 				xhttp.onload = function() {
 					document.getElementById("demo").innerHTML =
