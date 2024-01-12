@@ -15,7 +15,7 @@ body {
 	position: fixed;
 }
 p {
-	color: #99120b;
+	color: #55ff55;
 }
 
 input {
@@ -42,11 +42,12 @@ button {
 		</style>
 	</head>
 	<body>
-			<pre><code><p id="demo"></p><br /><input type="text" id="myText" value="command"></input><button onclick="myFunction()">SXND</button></code></pre>
+			<pre><code><p id="demo">TYPE ON COMMAND BELOW</p><br /><input type="text" id="myText" value="command"></input><button onclick="myFunction()">SXND</button></code></pre>
 		<script type="application/javascript">
 			function myFunction() {
-  var x = document.getElementById("myText").value;
-  document.getElementById("demo").innerHTML = "Query Blocked by Miguel<br />with request: " + x.split(" ", 3);
+				var x = document.getElementById("myText").value;
+				document.getElementById("demo").style = "color:ff5555;";
+				document.getElementById("demo").innerHTML = "Query Blocked by Miguel<br />with request: " + x;
 			}
 		</script>
 	</body>
