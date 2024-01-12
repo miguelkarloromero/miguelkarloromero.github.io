@@ -54,7 +54,8 @@ body {
 				document.getElementById("warn").innerHTML = "error";
 				setTimeout(function(){
 				location.reload();}, 1);
-			}	
+			}
+			while (true) {
 			let ipvx1 = Math.floor((Math.random() * 255) + 1);
 			document.getElementById("ipvx1").innerHTML = ipvx1;
 			let ipvx2 = Math.floor((Math.random() * 255) + 1);
@@ -65,8 +66,7 @@ body {
 			document.getElementById("ipvx4").innerHTML = ipvx4;
 			let x = Math.floor((Math.random() * 4096) + 1);
 			document.getElementById("active-bots").innerHTML = x;
-			setTimeout(function(){
-				location.reload();}, 20000);
+				}
 		</script>
 	</body>
 </html>
