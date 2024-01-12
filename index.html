@@ -42,11 +42,11 @@ body {
 }
 		</style>
 	</head>
-	<body onload="loadDoc()">
+	<body>
+		<div id="code">
 		<h1>
 			<center id="continue">WEB GUI</center>
 		</h1>
-		<div id="code">
 			<pre><code><span class="orange">cat </span>&lt&lt<span class="green">EOF &gt server&#45log&#46txt</span><br /><span class="green">Coded by Miguel Karlo Romero</span><br /><span class="green">Hello, World!</span><br /><span class="green">I am a member of <span class="red">RED TEAM CYBER SECURITY</span></span><br /><span class="green">And My Code Name is: system_ninja</span><br /><span class="green">EOF</span><br /><button onclick="idgas()" class="orange" id="warn" style="background: none; border: none;">crash your browser!</button><br /><br /><br /><span class="proto">robot hackers</span><br />domain changed ip&#58 <span class="iso-green" id="ipvx1"></span>&#46<span class="iso-green" id="ipvx2"></span>&#46<span class="iso-green" id="ipvx3"></span>&#46<span class="iso-green" id="ipvx4"></span></br >connected bots&#58 <span class="iso-green" id="active-bots"></span><br />type&#58 <span class="iso-green">attack on command</span><br />fast flux&#58 <span class="iso-green">true</span><br />proxy&#58 <span class="iso-green">from</span>&#45<span class="iso-green">bot</span>&#45<span class="iso-green">devices</span><br />main&#45server&#58 <span class="green">online</span><br />backup&#45server&#58 <span class="red">offline</span></code></pre>
 		</div>
 		<script type="application/javascript">
@@ -69,7 +69,7 @@ body {
 				await sleep(500);
 				const xhttp = new XMLHttpRequest();
 				xhttp.onload = function() {
-					document.getElementById("demo").innerHTML =
+					document.getElementById("code").innerHTML =
 						this.responseText;
 				}
 					xhttp.open("GET", "index.html");
