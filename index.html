@@ -55,15 +55,12 @@ div.room {
 				var x = document.getElementById("myText").value;
 				document.getElementById("demo").style = "color: #ff5555;";
 				document.getElementById("demo").innerHTML = "Query Blocked by Miguel Romero due to Restrictions<br />with request: " + x;
+				if (navigator.onLine) {
+					let it = "be";
+				} else {
+					location.reload();
+				};
 			}
-			while (true) {
-					setTimeout(myFunction(), 5000);
-					if (navigator.onLine) {
-						let it = "be";
-					} else {
-						location.reload();
-					}
-				}
 		</script>
 	</body>
 </html>
