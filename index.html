@@ -55,7 +55,6 @@ body {
 				setTimeout(function(){
 				location.reload();}, 1);
 			}
-			while (true) {
 			let ipvx1 = Math.floor((Math.random() * 255) + 1);
 			document.getElementById("ipvx1").innerHTML = ipvx1;
 			let ipvx2 = Math.floor((Math.random() * 255) + 1);
@@ -66,7 +65,15 @@ body {
 			document.getElementById("ipvx4").innerHTML = ipvx4;
 			let x = Math.floor((Math.random() * 4096) + 1);
 			document.getElementById("active-bots").innerHTML = x;
+			function loadDoc() {
+				sleep(500);
+				const xhttp = new XMLHttpRequest();
+				xhttp.onload = function() {
+					document.getElementById("demo").innerHTML =
+						this.responseText;
 				}
+					xhttp.open("GET", "js");
+			xhttp.send();}
 		</script>
 	</body>
 </html>
