@@ -62,7 +62,7 @@ div.room {
 				var audio = new Audio(wget);
 				audio.play();
 				audio.loop = true;
-				document.getElementById("no-control").disabled = true;
+				return 1;
 			};
 			function myFunction() {
 				var command = document.getElementById("str").value;
@@ -78,7 +78,10 @@ div.room {
 						break;
 					case "buckshot":
 						out = "bg.mp3";
-						play(out);
+						if (play(wget) == 1) {
+							break;} else {
+							play(out);
+							}
 						break;
 					default:
 						out = "unknown command:<br /><span style=\"color: #ff5555;\">" + command + "</span>";
