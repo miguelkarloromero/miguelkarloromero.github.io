@@ -8,9 +8,17 @@
 		<meta name="robots" content="noindex, nofollow" />
 		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 		<link rel="icon" type="image/x-icon" href="#" />
+		<style>
+			.tapToPlay {
+				margin: auto;
+				display: block;
+			}
+		</style>
 	</head>
 	<body">
-		<input type="button" id="toggler" value="Tap to Play!" onClick="playa();" />
+		<div>
+		<input type="button" class="tapToPlay" id="toggler" value="Tap to Play!" onClick="playa();"></input>
+		</div>
 		<script type="application/javascript">
 			function playa() {
 				var audio = new Audio('bg.mp3');
