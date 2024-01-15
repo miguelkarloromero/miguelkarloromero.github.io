@@ -9,12 +9,20 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 		<link rel="icon" type="image/x-icon" href="#" />
 	</head>
-	<body onload="play()">
+	<body">
+		<button id="tapToPlay" onclick="play();"></button>
 		<script type="application/javascript">
-			function play() {
+			const button = document.getElementById('tapToPlay');
+			let elementClicked = false;
+			button.addEventListener('click', function handleClick() {
 				var audio = new Audio('bg.mp3');
 				audio.play();
 				audio.loop = true;
-			}</script>
+				if (elementClicked) {
+					break;
+				}
+				elementClicked = true;
+			});
+		</script>
 	</body>
 </html>
