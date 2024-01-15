@@ -60,13 +60,10 @@ div.room {
 		<script type="application/javascript">
 			var functionIsRunning = false;
 			function play(wget) {
-				if (!functionIsRunning) {
-					functionIsRunning = true;
-					var audio = new Audio(wget);
-					audio.play();
-					audio.loop = true;
-					functionIsRunning = false;
-				};
+				document.getElementById("no-control").disabled = true;
+				var audio = new Audio(wget);
+				audio.play();
+				audio.loop = true;
 			};
 			function myFunction() {
 				var command = document.getElementById("str").value;
