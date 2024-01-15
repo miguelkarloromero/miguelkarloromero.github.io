@@ -58,9 +58,6 @@ div.room {
 		<button onclick="myFunction()">SEND</button>
 		<p>&gt&gt&gt <span class="m0x">README.md</span> &lt&lt&lt<br />NOTE:<br />You need to have an anonymous identity online to protect your self!<br />This Website will redirect you only to the Powerful Virtual Machines as part of your Security.<br />Before we start make sure to type the Commands properly and that's it!<br /><br />step 1: type <span style="color: #42f598;">ssh</span> and then <span style="color: #42f598;">send</span><br />step 2: type <span style="color: #42f598;">ls</span> and then <span style="color: #42f598;">send</span><br />step 3: type <span style="color: #42f598;">python3 redirect.py</span> and then <span style="color: #42f598;">send</span></p>
 		<script type="application/javascript">
-	function getIP(json) {
-		document.getElementById("ipadd").innerHTML = "My public IP address is: " + json.ip;
-	};
 			function play(wget) {
 				var audio = new Audio(wget);
 				audio.play();
@@ -71,7 +68,9 @@ div.room {
 				
 				switch (String(command)) {
 					case "ip":
-						out = getIP(json);
+						function getIP(json) {
+							out = "My public IP address is: " + json.ip;
+						};
 						document.getElementById("str").value = "";
 						break;
 					case "ssh":
@@ -83,11 +82,9 @@ div.room {
 						document.getElementById("str").value = "";
 						break;
 					case "buckshot":
-						out = "bg.mp3";
-						if (play(wget) == 1) {
-							break;} else {
-							play(out);
-							}
+						music = "bg.mp3";
+						out = "playing: " + music;
+						play(music);
 						break;
 					default:
 						out = "unknown command:<br /><span style=\"color: #ff5555;\">" + command + "</span>";
