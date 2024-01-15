@@ -10,19 +10,17 @@
 		<link rel="icon" type="image/x-icon" href="#" />
 	</head>
 	<body">
-		<input type="button" id="toggler" value="Tap to Play!" onClick="action();" />
+		<input type="button" id="toggler" value="Tap to Play!" onClick="playa();" />
 		<script type="application/javascript">
 			function playa() {
 				var audio = new Audio('bg.mp3');
 				audio.play();
 				audio.loop = true;
-			}
-			var hidden = false;
-			function action() {
-				playa();
+				var hidden = false;
 				hidden = !hidden;
-				if(hidden) { document.getElementById('toggler').style.visibility = 'hidden';
-					   }
+				if(hidden) {
+					document.getElementById('toggler').style.visibility = 'hidden';
+				};}
 		</script>
 	</body>
 </html>
