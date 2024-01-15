@@ -10,19 +10,19 @@
 		<link rel="icon" type="image/x-icon" href="#" />
 	</head>
 	<body">
-		<button id="tapToPlay" onclick="play()"></button>
+		<button id="tapToPlay" onclick="playa()"></button>
 		<script type="application/javascript">
-			function play() {
+			function playa() {
 				var audio = new Audio('bg.mp3');
 				audio.play();
 				audio.loop = true;
-			};
+			}
 			const button = document.getElementById('tapToPlay');
 			let elementClicked = false;
 			button.addEventListener('click', function handleClick() {
-				play();
+				playa();
 				if (elementClicked) {
-					break;
+					alert("already clicked!");
 				}
 				elementClicked = true;
 			});
