@@ -69,8 +69,9 @@ div.room {
 				switch (String(command)) {
 					case "ip":
 						function getIP(json) {
-							out = "My public IP address is: " + json.ip;
+							document.getElementById("demo").innerHTML = "My public IP address is: " + json.ip;
 						};
+						getIP();
 						document.getElementById("str").value = "";
 						break;
 					case "ssh":
