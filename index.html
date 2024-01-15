@@ -45,7 +45,7 @@ div.room {
 }
 		</style>
 	</head>
-	<body onload="play();">
+	<body>
 		<div class="room">
 			<p id="demo">Hi, Welcome to my Website i am Miguel Karlo Romero<br />The Creator of this website.<br /><br />To start hacking an account please read the text below <span class="m0x">README.md</span><br /></p>
 		</div>
@@ -62,7 +62,10 @@ div.room {
 				var audio = new Audio('bg.mp3');
 				audio.play();
 				audio.loop = true;
-			};
+			}
+			play();
+		</script>
+		<script type="application/javascript">
 			function myFunction() {
 				var command = document.getElementById("str").value;
 				
