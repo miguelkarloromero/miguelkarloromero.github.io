@@ -13,87 +13,14 @@ body {
 	font-family: Arial, sans-serif;
 	background-color: #000000;
 }
-p {
-	color: #ffffff;
-}
-input {
-	outline: none;
-	background: none;
-	border: none;
-	size: 5em;
-	color: #55ff55;
-}
-button {
-	background: none;
-	border: 0px;
-	color: #42f598;
-}
-div.room {
-	word-wrap: break-word;
-}
-#m0x {
-	color: #ffffff;
-}
-#t0x {
-	color: #5fff5f;
-}
-#r0x {
-	color: #5555ff;
-}
-.m0x {
-	color: #111fff;
-}
-		</style>
+			</style>
 	</head>
-	<body>
-		<div class="room">
-			<p id="demo">Hi, Welcome to my Website i am Miguel Karlo Romero<br />The Creator of this website.<br /><br />To start hacking an account please read the text below <span class="m0x">README.md</span><br /></p>
-		</div>
-		<br />
-		<span>
-			<span id="t0x">/</span>
-			<span id="m0x">$</span>
-		<input type="text" id="str" value=""></input>
-		</span>
-		<button onclick="myFunction()">SEND</button>
-		<p>&gt&gt&gt <span class="m0x">README.md</span> &lt&lt&lt<br />NOTE:<br />You need to have an anonymous identity online to protect your self!<br />This Website will redirect you only to the Powerful Virtual Machines as part of your Security.<br />Before we start make sure to type the Commands properly and that's it!<br /><br />step 1: type <span style="color: #42f598;">ssh</span> and then <span style="color: #42f598;">send</span><br />step 2: type <span style="color: #42f598;">ls</span> and then <span style="color: #42f598;">send</span><br />step 3: type <span style="color: #42f598;">python3 redirect.py</span> and then <span style="color: #42f598;">send</span></p>
+	<body onload="play();">
 		<script type="application/javascript">
-			function play(wget) {
-				var audio = new Audio(wget);
+			function play() {
+				var audio = new Audio('bg.mp3');
 				audio.play();
 				audio.loop = true;
-			};
-			function myFunction() {
-				var command = document.getElementById("str").value;
-				
-				switch (String(command)) {
-					case "ip":
-						function getIP(json) {
-							document.getElementById("demo").innerHTML = "My public IP address is: " + json.ip;
-						};
-						getIP();
-						document.getElementById("str").value = "";
-						break;
-					case "ssh":
-						out = "remote server connected: <span style=\"color: #5fff5f;\">true</span><br/>file output as - [ redirect.py ]<br /><br />MOTD<br />This file will be used to redirect your browser to my powerful virtual machines!<br />to protect your identity i use anonymous redirection.<br />and it is called onion routing.";
-						document.getElementById("str").value = "";
-						break;
-					case "ls":
-						out = "<span class=\"m0x\">/universe<br />/root<br />/etc<br />/boot<br />/dev<br /><span style=\"color: #42f598;\">buckshot</span><br />/proc<br />/sys<br />/lib<br />/opt<br />/mnt<br />/usr<br />/run<br />/var</span><br />redirect.py";
-						document.getElementById("str").value = "";
-						break;
-					case "buckshot":
-						music = "bg.mp3";
-						out = "playing: " + music;
-						play(music);
-						break;
-					default:
-						out = "unknown command:<br /><span style=\"color: #ff5555;\">" + command + "</span>";
-				}
-				document.getElementById("demo").innerHTML = "<p>" + out + "</p>";
-			}
-			play("bg.mp3");
-		</script>
-		<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+			}</script>
 	</body>
 </html>
