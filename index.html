@@ -58,7 +58,7 @@ div.room {
 		<button onclick="myFunction()">SEND</button>
 		<p>&gt&gt&gt <span class="m0x">README.md</span> &lt&lt&lt<br />NOTE:<br />You need to have an anonymous identity online to protect your self!<br />This Website will redirect you only to the Powerful Virtual Machines as part of your Security.<br />Before we start make sure to type the Commands properly and that's it!<br /><br />step 1: type <span style="color: #42f598;">ssh</span> and then <span style="color: #42f598;">send</span><br />step 2: type <span style="color: #42f598;">ls</span> and then <span style="color: #42f598;">send</span><br />step 3: type <span style="color: #42f598;">python3 redirect.py</span> and then <span style="color: #42f598;">send</span></p>
 		<script type="application/javascript">
-			document.getElementById("room").onload = function play() {
+			function play() {
 				var audio = new Audio('bg.mp3');
 				audio.play();
 				audio.loop = true;
@@ -80,6 +80,7 @@ div.room {
 				}
 				document.getElementById("demo").innerHTML = "<p>" + out + "</p>";
 			}
+			play();
 		</script>
 	</body>
 </html>
