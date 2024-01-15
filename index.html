@@ -10,7 +10,7 @@
 		<link rel="icon" type="image/x-icon" href="#" />
 	</head>
 	<body">
-		<button id="tapToPlay" onclick="playa()"></button>
+		<button id="tapToPlay" onclick="playa()">PRESS TO PLAY</button>
 		<script type="application/javascript">
 			function playa() {
 				var audio = new Audio('bg.mp3');
@@ -21,7 +21,7 @@
 			let elementClicked = false;
 			button.addEventListener('click', function handleClick() {
 				if (elementClicked) {
-					break;
+					alert("n");
 				}
 				elementClicked = true;
 			});
