@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
-		<title>No Content to Show</title>
+		<title>NSFW</title>
 		<meta charset="UTF-8" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
@@ -12,17 +12,19 @@
 			body {
 				font-family: Arial, sans-serif;
 				background-color: #060606;
-				font-size: 7vw;
+				font-size: 5vw;
 			}
 			p {
 				color: #ffffff;
 			}
 		</style>
 	</head>
-	<body">
+	<body>
 		<div>
-			<p>Sorry no Content to Show<br />Due to <span style="color: #a83632;">Restrictions</span></p>
-		<input type="button" style="color: #ffffff; border: none; background: none; font-size: 7vw; color: #32a852;" id="toggler" value="Tap to play music" onClick="playa();"></input>
+			<p>This page temporarily closed!<br />Due to <span style="color: #a83632;">NSFW</span> art Content.</p>
+			<br />
+			<p id="admin">Admin and Creator of this Website</p>
+		<input type="button" style="color: #ffffff; border: none; background: none; font-size: 5vw; color: #32a852;" id="toggler" value="Tap to see the Admin" onClick="playa();"></input>
 		</div>
 		<script type="application/javascript">
 			function playa() {
@@ -33,6 +35,7 @@
 				hidden = !hidden;
 				if(hidden) {
 					document.getElementById('toggler').style.visibility = 'hidden';
+					document.getElementById('admin').innerHTML = 'Miguel Karlo Romero';
 				};}
 		</script>
 	</body>
