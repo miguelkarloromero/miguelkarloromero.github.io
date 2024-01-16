@@ -22,7 +22,6 @@
 	<body>
 		<div>
 			<p>This page is temporarily closed!<br />No <span style="color: #a83632;">NSFW</span> art Content to Show.</p>
-			<p id="admin">Admin and Creator of this Website</p>
 		<input type="button" style="color: #ffffff; border: none; background: none; font-size: 5vw; color: #32a852;" id="toggler" value="Tap to see the Admin" onClick="main();"></input>
 		</div>
 		<script type="application/javascript">
@@ -33,8 +32,8 @@
 				var hidden = false;
 				hidden = !hidden;
 				if(hidden) {
-					document.getElementById('toggler').style.visibility = 'hidden';
-					document.getElementById('admin').innerHTML = 'Miguel Karlo Romero';
+					document.getElementById('toggler').disabled = true;
+					document.getElementById('toggler').value = 'Miguel Karlo Romero';
 				};}
 		</script>
 	</body>
