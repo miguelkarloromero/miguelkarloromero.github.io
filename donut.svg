@@ -1,0 +1,13 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="50" fill="lightblue" />
+  <circle cx="100" cy="100" r="30" fill="white" />
+  <animateTransform
+    attributeName="transform"
+    attributeType="XML"
+    type="rotate"
+    from="0 100 100"
+    to="360 100 100"
+    dur="10s"
+    repeatCount="indefinite"
+  />
+</svg>
