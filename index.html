@@ -13,6 +13,7 @@ body {
 	background-color: black;
 	color: white;
 	font-family: "Courier New", monospace;
+	size: 3vw;
 }
 #removeBG {
 	background: none;
@@ -29,20 +30,20 @@ body {
 	NOTE: Do not run this code! It does nothing.
 """
 # --- Functions ---
-def sys-stat1(port):
+def sys_stat1(port):
     print(f"HOST: 192.168.1.*\nPORT: {port}")
 
-def sys-stat2(status, proxy):
+def sys_stat2(status, proxy):
     print(f"Server-status: {status}\nProxy: {proxy}")
 
-def sys-stat3(flux):
+def sys_stat3(flux):
     print(f"Changing-IP: {flux}.")
 
 # --- Arguments ---
 server_status = [
-    (sys-stat1, 443),
-    (sys-stat2, "Running", "True"),
-    (sys-stat3, "True")
+    (sys_stat1, 443),
+    (sys_stat2, "Running", "True"),
+    (sys_stat3, "True")
 ]
 
 # --- Run ---
