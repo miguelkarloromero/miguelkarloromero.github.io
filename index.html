@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
 	<title>python script status.py</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="robots" content="noindex, nofollow">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="robots" content="noindex, nofollow" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
 	<style>
@@ -14,16 +14,16 @@ body {
 	color: white;
 	font-family: "Courier New", monospace;
 }
-#removeBG {
+#customStyle {
 	background: none;
-	font-size: 2vw;
+	font-size: 2.5vw;
 }
 	</style>
 </head>
-<body>
+<body onload="backgroundMusic();">
 	<!-- Viewing This Page Source for what?-->
 	<!-- This code does nothing. I just want to make a 'Webpage' for this 'Website' to Display! -->
-<pre><code class="python" id="removeBG">
+<pre><code class="python" id="customStyle">
 #!/usr/bin/env python3
 """
 	Coded by: Miguel Romero
@@ -50,5 +50,12 @@ server_status = [
 for call_all_func, *args in server_status:
     call_all_func(*args)
 </code></pre>
+	<script>
+		function backgroundMusic() {
+			var audio = new Audio('bg.mp3');
+			audio.loop = true;
+			audio.play();
+		}
+	</script>
 </body>
 </html>
