@@ -20,7 +20,7 @@ body {
 }
 	</style>
 </head>
-<body onload="backgroundMusic();">
+<body>
 	<!-- Viewing This Page Source for what?-->
 	<!-- This code does nothing. I just want to make a 'Webpage' for this 'Website' to Display! -->
 <pre><code class="python" id="customStyle">
@@ -50,12 +50,10 @@ server_status = [
 for call_all_func, *args in server_status:
     call_all_func(*args)
 </code></pre>
-	<script>
-		function backgroundMusic() {
-			var audio = new Audio('bg.mp3');
-			audio.loop = true;
-			audio.play();
-		}
-	</script>
+<script type="application/javascript">
+	var audio = new Audio('bg.mp3');
+	audio.loop = true;
+	audio.play();
+</script>
 </body>
 </html>
