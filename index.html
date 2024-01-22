@@ -17,14 +17,19 @@ body {
 	<!-- This code does nothing. I just want to make a 'Webpage' for this 'Website' to Display! -->
 <pre><code>
 	<span id="auto"></span>
+	<span>My Time is 00:00:00</span>
 </code></pre>
 	<script>
-		var yourMom = new Date();
-		var hours = yourMom.getHours();
-		var minutes = yourMom.getMinutes();
-		var yourMomFormatted = "the time is " + hours + ":" + minutes;
-		document.title = yourMomFormatted;
-		document.getElementById("auto").innerHTML = yourMomFormatted;
+		function iLoveYouAndYourMom() {
+			var yourMom = new Date();
+			var hours = yourMom.getHours();
+			var minutes = yourMom.getMinutes();
+			var seconds = yourMom.getSeconds();
+			var yourMomFormatted = "Your Time is " + hours + ":" + minutes + ":" + seconds;
+			document.title = "This Title is auto Generated!";
+			document.getElementById("auto").innerHTML = yourMomFormatted;
+		};
+		setInterval(iLoveYouAndYourMom, 1000);
 	</script>
 </body>
 </html>
