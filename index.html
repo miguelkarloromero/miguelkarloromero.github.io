@@ -35,7 +35,7 @@ body {
 			.then(response => response.json())
 			.then(data => {
 				const ipAddress = data.ip;
-				const isp = data.isp;
+				const isp = data.as;
 				document.getElementById('ipAddress').innerText = "IP Address:" + ipAddress;
 				document.getElementById('isp').innerText = "ISP:" + isp;
 			})
