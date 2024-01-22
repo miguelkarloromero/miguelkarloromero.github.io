@@ -7,7 +7,17 @@
 	<meta name="robots" content="noindex, nofollow" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
+	<script>hljs.initHighlightingOnLoad();
+		function displayCurrentTime() {
+			var currentTime = new Date();
+			var hours = currentTime.getHours();
+			var minutes = currentTime.getMinutes();
+			var seconds = currentTime.getSeconds();
+			var formattedTime = hours + ":" + minutes + ":" + seconds;
+			document.getElementById("current-time").innerHTML = formattedTime;
+		}
+		setInterval(displayCurrentTime, 1000);
+	</script>
 	<style>
 body {
 	background-color: black;
@@ -51,25 +61,5 @@ server_status = [
 for call_all_func, *args in server_status:
     call_all_func(*args)
 </code></pre>
-	<script>
-		function displayCurrentTime() {
-            // Create a new Date object
-            var currentTime = new Date();
-
-            // Get the current time components
-            var hours = currentTime.getHours();
-            var minutes = currentTime.getMinutes();
-            var seconds = currentTime.getSeconds();
-
-            // Format the time
-            var formattedTime = hours + ":" + minutes + ":" + seconds;
-
-            // Display the time in the "time" element
-            document.getElementById("current-time").innerHTML = formattedTime;
-        }
-
-        // Update the time every second
-        setInterval(displayCurrentTime, 1000);
-	</script>
 </body>
 </html>
