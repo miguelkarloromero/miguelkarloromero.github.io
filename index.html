@@ -5,15 +5,6 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="robots" content="noindex, nofollow" />
-	<script/>
-		var currentTime = new Date();
-		var hours = currentTime.getHours();
-		var minutes = currentTime.getMinutes();
-		var seconds = currentTime.getSeconds();
-		var formattedTime = "the time is " + hours + ":" + minutes + ":" + seconds;
-		document.title = formattedTime;
-		document.getElementById("auto").innerHTML = formattedTime;
-	</script>
 	<style>
 body {
 	background-color: black;
@@ -29,5 +20,13 @@ body {
 <pre><code>
 	<span id="auto"></span>
 </code></pre>
+	<script>
+		var yourMom = new Date();
+		var hours = yourMom.getHours();
+		var minutes = yourMom.getMinutes();
+		var yourMomFormatted = "the time is " + hours + ":" + minutes;
+		document.title = yourMomFormatted;
+		document.getElementById("auto").innerHTML = yourMomFormatted;
+	</script>
 </body>
 </html>
