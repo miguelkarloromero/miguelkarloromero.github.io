@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-	<title></title>
+	<title id="title"></title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="robots" content="noindex, nofollow" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
 	<script>hljs.initHighlightingOnLoad();
-		function displayCurrentTime() {
-			var currentTime = new Date();
-			var hours = currentTime.getHours();
-			var minutes = currentTime.getMinutes();
-			var seconds = currentTime.getSeconds();
-			var formattedTime = "your time is" + hours + ":" + minutes + ":" + seconds;
-			document.getElementById("current-time").innerHTML = formattedTime;
-		};
-		displayCurrentTime();
+		var currentTime = new Date();
+		var hours = currentTime.getHours();
+		var minutes = currentTime.getMinutes();
+		var seconds = currentTime.getSeconds();
+		var formattedTime = "the time is " + hours + ":" + minutes + ":" + seconds;
+		document.getElementById("current-time").title = formattedTime;
 	</script>
 	<style>
 body {
