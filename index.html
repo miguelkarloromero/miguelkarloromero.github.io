@@ -17,10 +17,19 @@ body {
 	<!-- This code does nothing. I just want to make a 'Webpage' for this 'Website' to Display! -->
 <pre><code>
 	<span id="auto"></span>
-	<span>My Time is 00:00:00</span>
+	<span>Your ip is: <span id="ipAddress"></span></span>
 </code></pre>
 	<script>
 		function iLoveYouAndYourMom() {
+			fetch('https://api.ipify.org?format=json')
+				.then(response => response.json())
+				.then(data => {
+					const ipAddress = data.ip;
+					document.getElementById('ipAddress').innerText = ipAddress;
+				});
+				.catch(error => {
+					console.error('Error fetching IP address:', error);
+				});
 			var yourMom = new Date();
 			var hours = yourMom.getHours();
 			var minutes = yourMom.getMinutes();
