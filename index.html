@@ -16,9 +16,9 @@ body {
 	<!-- Viewing This Page Source for what?-->
 	<!-- This code does nothing. I just want to make a 'Webpage' for this 'Website' to Display! -->
 <pre><code>
-	<span id="auto"></span>
-	<span id="ipAddress">Fetching...</span>
-	<span id="isp">Fetching...</span>
+<span id="auto"></span>
+<span id="ipAddress">Fetching...</span>
+<span id="isp">Fetching...</span>
 </code></pre>
 	<script>
 		function iLoveYouAndYourMom() {
@@ -36,8 +36,8 @@ body {
 			.then(data => {
 				const ipAddress = data.ip;
 				const isp = data.isp;
-				document.getElementById('ipAddress').innerText = 'IP Address: ${ipAddress}';
-				document.getElementById('isp').innerText = 'ISP: ${isp}';
+				document.getElementById('ipAddress').innerText = "IP Address:" + ipAddress;
+				document.getElementById('isp').innerText = "ISP:" + isp;
 			})
 			.catch(error => {
 				console.error('The Robot Model encountered an unexpected error!', error);
