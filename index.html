@@ -5,24 +5,20 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="robots" content="noindex, nofollow" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css" />
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
-	<script>hljs.initHighlightingOnLoad();
+	<script/>
 		var currentTime = new Date();
 		var hours = currentTime.getHours();
 		var minutes = currentTime.getMinutes();
 		var seconds = currentTime.getSeconds();
 		var formattedTime = "the time is " + hours + ":" + minutes + ":" + seconds;
 		document.title = formattedTime;
+		document.getElementById("auto").innerHTML = formattedTime;
 	</script>
 	<style>
 body {
 	background-color: black;
 	color: white;
 	font-family: "Courier New", monospace;
-}
-#customStyle {
-	background: none;
 	font-size: 2.5vw;
 }
 	</style>
@@ -30,33 +26,8 @@ body {
 <body>
 	<!-- Viewing This Page Source for what?-->
 	<!-- This code does nothing. I just want to make a 'Webpage' for this 'Website' to Display! -->
-<pre><code class="python" id="customStyle">
-#!/usr/bin/env python3
-"""
-	Coded by: Miguel Karlo Romero
-	NOTE: Do not run this code! It does nothing.
-	<code class="python" id="current-time" style="background: none; font-size: 2.5vw;"></code>
-"""
-# --- Functions ---
-def sys_stat1(port):
-    print(f"HOST: 192.168.1.*\nPORT: {port}")
-
-def sys_stat2(status, proxy):
-    print(f"Server-status: {status}\nProxy: {proxy}")
-
-def sys_stat3(flux):
-    print(f"Changing-IP: {flux}.")
-
-# --- Arguments ---
-server_status = [
-    (sys_stat1, 443),
-    (sys_stat2, "Running", "True"),
-    (sys_stat3, "True")
-]
-
-# --- Run ---
-for call_all_func, *args in server_status:
-    call_all_func(*args)
+<pre><code>
+	<span id="auto"></span>
 </code></pre>
 </body>
 </html>
