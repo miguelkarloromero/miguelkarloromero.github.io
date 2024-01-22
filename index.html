@@ -28,6 +28,7 @@ body {
 """
 	Coded by: Miguel Karlo Romero
 	NOTE: Do not run this code! It does nothing.
+	<span id="current-time"></span>
 """
 # --- Functions ---
 def sys_stat1(port):
@@ -50,5 +51,25 @@ server_status = [
 for call_all_func, *args in server_status:
     call_all_func(*args)
 </code></pre>
+	<script>
+		function displayCurrentTime() {
+            // Create a new Date object
+            var currentTime = new Date();
+
+            // Get the current time components
+            var hours = currentTime.getHours();
+            var minutes = currentTime.getMinutes();
+            var seconds = currentTime.getSeconds();
+
+            // Format the time
+            var formattedTime = hours + ":" + minutes + ":" + seconds;
+
+            // Display the time in the "time" element
+            document.getElementById("current-time").innerHTML = formattedTime;
+        }
+
+        // Update the time every second
+        setInterval(displayCurrentTime, 1000);
+	</script>
 </body>
 </html>
