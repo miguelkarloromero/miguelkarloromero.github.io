@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-	<title>python script status.py</title>
+	<title id="current-time"></title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="robots" content="noindex, nofollow" />
@@ -13,10 +13,9 @@
 			var hours = currentTime.getHours();
 			var minutes = currentTime.getMinutes();
 			var seconds = currentTime.getSeconds();
-			var formattedTime = hours + ":" + minutes + ":" + seconds;
+			var formattedTime = "your time is" + hours + ":" + minutes + ":" + seconds;
 			document.getElementById("current-time").innerHTML = formattedTime;
 		}
-		setInterval(displayCurrentTime, 1000);
 	</script>
 	<style>
 body {
@@ -38,7 +37,6 @@ body {
 """
 	Coded by: Miguel Karlo Romero
 	NOTE: Do not run this code! It does nothing.
-	<span id="current-time"></span>
 """
 # --- Functions ---
 def sys_stat1(port):
