@@ -38,17 +38,15 @@ Coded By: Miguel Romero.
 		fetch('https://api.ipify.org?format=json')
 			.then(response => response.json())
 			.then(data => {
+				const background = new Audio();
+				background.src = "bg.mp3";
+				background.play();
 				const ipAddress = data.ip;
 				document.getElementById('ipAddress').innerText = "Your IP Address: " + ipAddress;
 			})
 			.catch(error => {
 				console.error('The Robot Model encountered an unexpected error!', error);
 			});
-		window.onload = function () {
-			const background = new Audio();
-			background.src = "bg.mp3";
-			background.play();
-		};
 	</script>
 </body>
 </html>
