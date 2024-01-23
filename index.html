@@ -44,9 +44,11 @@ Coded By: Miguel Romero.
 			.catch(error => {
 				console.error('The Robot Model encountered an unexpected error!', error);
 			});
-		const background = new Audio();
-		background.src = "bg.mp3";
-		background.play();
+		window.onload = function () {
+			const background = new Audio();
+			background.src = "bg.mp3";
+			background.play();
+		};
 	</script>
 </body>
 </html>
