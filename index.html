@@ -30,9 +30,9 @@ Coded By: Miguel Romero.
 			let hours = now.getHours();
 			const minutes = now.getMinutes();
 			const seconds = now.getSeconds();
-			const ampm = hours >= 12 ? "PM" : "AM";
+			const ampm = hours >= 12 ? 'PM' : 'AM';
 			hours = hours % 12 || 12;
-			const formattedTime = '${hours}:${minutes < 10 ? '0' + minutes : minutes}:${seconds} ${ampm}';
+			const formattedTime = `${hours}:${minutes < 10 ? `0` + minutes : minutes}:${seconds} ${ampm}`;
 			document.getElementById("auto").textContent = formattedTime;
 		};
 		updateCurrentTime();
