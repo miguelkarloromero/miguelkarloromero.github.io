@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-	<title id="title"></title>
+	<title>Index of this website!</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="robots" content="noindex, nofollow" />
@@ -25,16 +25,17 @@ Coded By: Miguel Romero.
 <span id="ipAddress">Fetching...</span>
 </code></pre>
 	<script>
-		function iLoveYouAndYourMom() {
-			var yourMom = new Date();
-			var hours = yourMom.getHours();
-			var minutes = yourMom.getMinutes();
-			var seconds = yourMom.getSeconds();
-			var yourMomFormatted = "Your Time: " + hours + ":" + minutes + ":" + seconds;
-			document.title = "This Webpage is auto Generated!";
-			document.getElementById("auto").innerHTML = yourMomFormatted;
+		function updateCurrentTime() {
+			const now = new Date();
+			let hours = now.getHours();
+			const minutes = now.getMinutes();
+			const ampm = hours >= 12 ? 'PM' : 'AM';
+			hours = hours % 12 || 12;
+			const formattedTime = `${hours}:${minutes < 10 ? '0' + minutes : minutes} ${ampm}`;
+			document.getElementById("auto").textContent = formattedTime;
 		};
-		setInterval(iLoveYouAndYourMom, 1000);
+		updateCurrentTime();
+		setInterval(updateCurrentTime, 1000);
 		fetch('https://api.ipify.org?format=json')
 			.then(response => response.json())
 			.then(data => {
