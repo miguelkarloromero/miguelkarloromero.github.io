@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Machine Learning</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <style>
+	body {
+		background-color: #110b8a;
+		color: #ffffff;
+	}
+
+        .styledButton {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        #button1 {
+            background-color: #110b8a;
+            color: #ffffff;
+            border: none;
+        }
+
+        #button2 {
+            background-color: #110b8a;
+            color: #ffffff;
+            border: none;
+        }
+
+	#ai {
+		color: #07942d;
+	}
+
+	#me {
+		color: #ff9d0a;
+	}
+    </style>
+</head>
+<body>
+<pre><code>
+______________________________________
+Machine Learning
+
+Ask a question using AI!
+
+AI Accuracy: <span id="ai">92.17%</span>
+--------------------------------------
+Coded by: <span id="me">Miguel Karlo Romero</span>
+
+Message of the Day:
+
+Hello i am Miguel Karlo Romero
+I want to be a Computer Scientist
+Or Probably a Cyber Security Engineer.
+--------------------------------------
+<span id="display-time"></span>
+______________________________________
+
+Please Select you AI model!
+<span>
+--------------------------------------
+<button id="button1" class="styledButton" onclick="changeStyle('button1')">Model Name: Netninja				  </button>
+--------------------------------------
+<button id="button2" class="styledButton" onclick="changeStyle('button2')">Model Name: Elliot					  </button>
+--------------------------------------
+</span>
+<p id="out"></p>
+</code></pre>
+    <script>
+	    function parallelShift() {
+		    	const parallel = new Date();
+		    	const year = parallel.getFullYear();
+			// Month Arrays
+		    	const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+		    	const months = month[parallel.getMonth()];
+		    	const day = "?";
+			let hours = parallel.getHours();
+			const minutes = parallel.getMinutes();
+			const seconds = parallel.getSeconds();
+			const checkIfAmOrPm = hours >= 12 ? 'PM' : 'AM';
+			hours = hours % 12 || 12;
+		    const parallelTime = `Year: \t${year}\nMonth: \t${months}\nDay: \t${day}\nTime: \t${hours}:${minutes < 10 ? `0` + minutes : minutes}:${seconds} ${checkIfAmOrPm}`;
+			document.getElementById("display-time").textContent = parallelTime;
+		};
+	    parallelShift();
+		setInterval(parallelShift, 1000);
+        function changeStyle(buttonId) {
+		// Reset styles for both buttons
+		var button1 = document.getElementById('button1');
+		var button2 = document.getElementById('button2');
+		var clickedButton = document.getElementById(buttonId);
+		var output = document.getElementById('out');
+
+		if (buttonId === 'button1') {
+            button1.style.backgroundColor = "#110b8a";
+            button1.style.color = "#ffffff";
+            button2.style.backgroundColor = "#110b8a";
+            button2.style.color = "#ffffff";
+			fetch('https://api.ipify.org?format=json')
+			.then(response => response.json())
+			.then(data => {
+				const publicIpAddress = data.ip;
+				output.innerText = `Public IP: ${publicIpAddress}
+
+Model: Netninja
+
+You are not allowed to use this AI!
+
+Please Contact: Miguel Karlo Romero
+`;
+			})
+			.catch(error => {
+				output.innerText = `${error}`;
+			});
+
+            // Change style for the clicked button
+            clickedButton.style.backgroundColor = "#190dff";
+            clickedButton.style.color = "#ff9d0a";
+		} else if (buttonId === 'button2') {
+			button1.style.backgroundColor = "#110b8a";
+            button1.style.color = "#ffffff";
+            button2.style.backgroundColor = "#110b8a";
+            button2.style.color = "#ffffff";
+
+            // Change style for the clicked button
+            clickedButton.style.backgroundColor = "#190dff";
+            clickedButton.style.color = "#ff9d0a";
+			fetch('https://api.ipify.org?format=json')
+			.then(response => response.json())
+			.then(data => {
+				const publicIpAddress = data.ip;
+				output.innerText = `Public IP: ${publicIpAddress}
+
+Model: Elliot
+
+You are not allowed to use this AI!
+
+Please Contact: Miguel Karlo Romero
+`;
+			})
+			.catch(error => {
+				output.innerText = `${error}`;
+			});
+		};
+	}
+    </script>
+
+</body>
+</html>
