@@ -2,135 +2,21 @@
 <html lang="en-US">
 <head>
 	<!-- Please don't take this seriously i just make this as a hobby project! -->
-    <title>WebShell v12.1.6</title>
+	<!-- This website do not store a malware or viruses that can harm a device! -->
+	<!-- Anything shown on this website is just a design no interaction is enabled! -->
+    <title>Code Repository</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
-    <style>
-	body {
-		background-color: #080957;
-		color: #ffffff;
-		font-size: 2.3141592653vw;
-	}
-
-	pre {
-		margin: -6.666px;
-	}
-
-	input {
-		background: none;
-		border: none;
-		outline: none;
-		color: white;
-	}
-
-	.yellow {
-		color: #ffe70d;
-	}
-
-	.green {
-		color: #35de1b;
-	}
-    </style>
 </head>
 <body>
-<pre><code id="code">Hackers WebShell
-Copyright (C) Hackers WebShell. All rights reserved 2024.
-
-Developer: <span style="color: #ffe70d;">Miguel Karlo Romero</span>
-I'm also a Cyber Security Engineer. <!-- On my own I'm a Cyber Security Engineer. -->
-
--------------------------------------------------
-Message from the developer Miguel:
-_________________________________________________
- Hello, Friend! please don't do stupid commands!
- Just because of that I just put some limitions
- on what you can access.
--------------------------------------------------
-
-<span id="output"></span><span><form id="cmd" onsubmit="handleSubmit(event);">WS C:\virtual-env\bash&gt <input type="text" id="void" placeholder="Enter a command"></input></form>
-</span>
-List of available commands:
- <span class="green">ls
- iproute
- cd</span>
-
-From NTP-server:
- ntp-server: <span class="yellow">ntp.android.localtime</span>
-<span id="display-time"></span>
-</code></pre>
-    <script>
-	    function handleSubmit(event) {
-		    event.preventDefault();
-		    var command = document.getElementById('cmd').elements['void'].value;
-		    var output = document.getElementById('output');
-		    let vl = `${command}`;
-		    var com = vl.split(' ');
-
-		    switch (com[0]) {
-			    case "":
-				    output.innerText = "";
-				    break;
-			    case "iproute":
-				    fetch('https://api.ipify.org?format=json')
-					    .then(response => response.json())
-					    .then(data => {
-						    const publicIpAddress = data.ip;
-						    var subnet = publicIpAddress.split('.');
-						    output.innerText = `255.255.${subnet[0]}.0/24 dev eth0 proto kernel scope link src: ${publicIpAddress}`;
-			})
-			.catch(error => {
-				output.innerText = `${error}`;
-			});
-
-				    output.innerText = "decrypting...";
-				    break;
-			    case "cd":
-				    if (typeof com[1] !== 'undefined') {
-					    output.innerText = `bash cd: ${com[1]}: Permission denied!\nSystem: Any action from cd is blocked due to security issues!`;
-				    } else {
-					    output.innerText = `bash cd: Permission denied!\nSystem: Any action from cd is blocked due to security issues!`;
-				    };
-				    break;
-			    case "ls":
-				    output.innerText = `
-/bin
-/sbin
-/etc
-/dev
-/proc
-/var
-/tmp
-/usr
-/home
-/bot
-/lib
-/mnt
-/media
-`;
-				    break;
-			    default:
-				    output.innerHTML = `command: ${command} not found!`;
-		    };
-	    };
-	    function parallelShift() {
-		    	const parallel = new Date();
-		    	const year = parallel.getFullYear();
-			// Month Arrays
-		    	const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-		    	const months = month[parallel.getMonth()];
-		    	const day = "sync error!";
-			let hours = parallel.getHours();
-			const minutes = parallel.getMinutes();
-			const seconds = parallel.getSeconds();
-			const checkIfAmOrPm = hours >= 12 ? 'PM' : 'AM';
-			hours = hours % 12 || 12;
-		    const parallelTime = ` Year: \t${year}\n Month:\t${months}\n Day: \t${day}\n Time: \t${hours}:${minutes < 10 ? `0` + minutes : minutes}:${seconds} ${checkIfAmOrPm}`;
-			document.getElementById("display-time").textContent = parallelTime;
-		};
-	    parallelShift();
-		setInterval(parallelShift, 200);
-    </script>
-
+<h1>Directory listing for /</h1>
+<hr>
+<ul>
+<li>Aug 16, 2022<a href="index.html">index.html</a></li>
+<li>Feb 12, 2024<a href="#">rootkit-v.1.1&#47</a></li>
+<li>Feb 3, 2024 <a href="#">rootkit-v.1.0&#47</a></li>
+</ul>
+<hr>
 </body>
 </html>
