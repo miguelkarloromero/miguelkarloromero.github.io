@@ -1,4 +1,16 @@
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="100" cy="100" r="80" fill="none" stroke="black"/>
-    <text x="20" y="110" font-family="Arial" font-size="18" fill="black">&#960;<tspan font-size="14">r<sup>2</sup></tspan></text>
+    <circle cx="100" cy="100" r="2" fill="black"/>
+    <circle cx="100" cy="100" r="80" fill="none" stroke="black">
+        <animateTransform
+            attributeName="transform"
+            attributeType="XML"
+            type="rotate"
+            from="0 100 100"
+            to="360 100 100"
+            dur="10s"
+            repeatCount="indefinite"
+        />
+    </circle>
+    <line x1="100" y1="100" x2="20" y2="100" stroke="black"/>
+    <text x="60" y="110" font-family="Arial" font-size="12" fill="black">r</text>
 </svg>
