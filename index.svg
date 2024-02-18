@@ -1,0 +1,4 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="100" cy="100" r="80" fill="none" stroke="black"/>
+    <text x="40" y="110" font-family="Arial" font-size="18" fill="black">&#960; r<sup>2</sup></text>
+</svg>
