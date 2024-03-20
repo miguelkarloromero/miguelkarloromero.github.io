@@ -1,3 +1,1 @@
-$$\pi\text{r}^2$$
-
-![SVG Image](index.svg)
+$\sqrt{\pi\text{r}^2}$
