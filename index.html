@@ -38,7 +38,8 @@
       const directions = ['N', 'E', 'S', 'W'];
       const index = Math.round(dir / 90) % 4;
       const directionText = document.getElementById('directionText');
-      directionText.textContent = `${directions[index]} ${Math.abs(360 - dir)}`;
+      const formattedDir = (Math.abs(360 - dir)).toFixed(1);
+      directionText.textContent = `${directions[index]} ${formattedDir}`;
     }
   </script>
 </body>
