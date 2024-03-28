@@ -35,10 +35,10 @@
     });
 
     function updateDirectionText(dir) {
-      const directions = ['N', 'E', 'S', 'W'];
-      const index = Math.round(dir / 90) % 4;
+      const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
+      const index = Math.round(dir / 45) % 8;
       const directionText = document.getElementById('directionText');
-      const formattedDir = (Math.abs(360 - dir)).toFixed(1);
+      const formattedDir = (Math.abs(360 - dir)).toFixed(0);
       directionText.textContent = `${directions[index]} ${formattedDir}`;
     }
   </script>
