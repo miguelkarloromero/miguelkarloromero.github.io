@@ -4,53 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Compass</title>
-  <style>
-    .compass {
-      width: 200px;
-      height: 200px;
-      position: relative;
-      background-color: #f0f0f0;
-      border-radius: 50%;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      margin: 20px auto;
-    }
-
-    .arrow {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 2px;
-      height: 90px;
-      background-color: red;
-      transform-origin: bottom center;
-      transform: translate(-50%, -100%) rotate(0deg);
-    }
-
-    .directions {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      font-size: 12px;
-      font-weight: bold;
-      color: #333;
-    }
-  </style>
 </head>
 <body>
   <h1>Compass</h1>
   <div class="compass">
     <div class="arrow"></div>
-    <div class="disc" id="compassDiscImg"></div>
-    <div class="directions">
-      <div>N</div>
-      <div>E</div>
-      <div>S</div>
-      <div>W</div>
-    </div>
+    <div class="directions" id="directionText">N 0</div>
   </div>
 
   <div class="orientation-data">
@@ -67,7 +26,7 @@
         window.addEventListener('deviceorientation', (eventData) => {
           const dir = eventData.alpha || 0;
           const compassArrow = document.querySelector('.arrow');
-          compassArrow.style.transform = `translate(-50%, -100%) rotate(${-dir}deg)`;
+          compassArrow.style.transform = `rotate(${-dir}deg)`;
           updateDirectionText(dir);
         }, false);
       } else {
@@ -76,12 +35,10 @@
     });
 
     function updateDirectionText(dir) {
-      const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW', 'N'];
-      const index = Math.round(dir / 45) % 8;
-      document.querySelector('.directions').style.transform = `rotate(${dir}deg)`;
-      document.querySelectorAll('.directions div').forEach((element, i) => {
-        element.textContent = directions[(index + i) % 8];
-      });
+      const directions = ['N', 'E', 'S', 'W'];
+      const index = Math.round(dir / 90) % 4;
+      const directionText = document.getElementById('directionText');
+      directionText.textContent = `${directions[index]} ${Math.abs(360 - dir)}`;
     }
   </script>
 </body>
