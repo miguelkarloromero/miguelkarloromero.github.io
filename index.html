@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compass</title>
+</head>
+<body>
+  <h1>Compass</h1>
+  <div>
+    <div>Beta: <span id="tiltFB"></span></div>
+    <div>Gamma: <span id="tiltLR"></span></div>
+    <div>Alpha: <span id="direction"></span></div>
+  </div>
+  <div id="notice"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function(event) {
+
+      if (window.DeviceOrientationEvent) {
+        document.getElementById('notice').innerHTML = 'Working API detected';
+        window.addEventListener('deviceorientation', (eventData) => {
+          // gamma: Tilting the device from left to right. Tilting the device to the right will result in a positive value.
+          const tiltLR = eventData.gamma;
+          // beta: Tilting the device from the front to the back. Tilting the device to the front will result in a positive value.
+          const tiltFB = eventData.beta;
+          // alpha: The direction the compass of the device aims to in degrees.
+          const dir = eventData.alpha
+          // Call the function to use the data on the page.
+          deviceOrientationHandler(tiltLR, tiltFB, dir);
+        }, false);
+      } else {
+        document.getElementById('notice').innerHTML = 'No API detected'
+      };
+
+      function deviceOrientationHandler(tiltLR, tiltFB, dir) {
+        document.getElementById('tiltLR').innerHTML = Math.ceil(tiltLR);
+        document.getElementById('tiltFB').innerHTML = Math.ceil(tiltFB);
+        document.getElementById('direction').innerHTML = Math.ceil(dir);
+      }
+
+    });
+  </script>
+</body>
+</html>
