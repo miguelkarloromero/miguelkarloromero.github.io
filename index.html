@@ -4,10 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Compass</title>
+  <style>
+    .compass {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      background-color: #f0f0f0;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      margin: 20px auto;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 2px;
+      height: 90px;
+      background-color: red;
+      transform-origin: bottom center;
+      transform: translate(-50%, -100%) rotate(0deg);
+    }
+
+    .directions {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-size: 12px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
   <h1>Compass</h1>
-  <div>
+  <div class="compass">
+    <div class="arrow"></div>
+    <div class="disc" id="compassDiscImg"></div>
+    <div class="directions">
+      <div>N</div>
+      <div>E</div>
+      <div>S</div>
+      <div>W</div>
+    </div>
+  </div>
+
+  <div class="orientation-data">
     <div>Beta: <span id="tiltFB"></span></div>
     <div>Gamma: <span id="tiltLR"></span></div>
     <div>Alpha: <span id="direction"></span></div>
@@ -16,29 +62,16 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function(event) {
-
       if (window.DeviceOrientationEvent) {
         document.getElementById('notice').innerHTML = 'Working API detected';
         window.addEventListener('deviceorientation', (eventData) => {
-          // gamma: Tilting the device from left to right. Tilting the device to the right will result in a positive value.
-          const tiltLR = eventData.gamma;
-          // beta: Tilting the device from the front to the back. Tilting the device to the front will result in a positive value.
-          const tiltFB = eventData.beta;
-          // alpha: The direction the compass of the device aims to in degrees.
-          const dir = eventData.alpha
-          // Call the function to use the data on the page.
-          deviceOrientationHandler(tiltLR, tiltFB, dir);
+          const dir = eventData.alpha || 0;
+          const compassArrow = document.querySelector('.arrow');
+          compassArrow.style.transform = `translate(-50%, -100%) rotate(${-dir}deg)`;
         }, false);
       } else {
-        document.getElementById('notice').innerHTML = 'No API detected'
-      };
-
-      function deviceOrientationHandler(tiltLR, tiltFB, dir) {
-        document.getElementById('tiltLR').innerHTML = Math.ceil(tiltLR);
-        document.getElementById('tiltFB').innerHTML = Math.ceil(tiltFB);
-        document.getElementById('direction').innerHTML = Math.ceil(dir);
+        document.getElementById('notice').innerHTML = 'No API detected';
       }
-
     });
   </script>
 </body>
