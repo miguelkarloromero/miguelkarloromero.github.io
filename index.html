@@ -3,41 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Compass</title>
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0e2439;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0; /* Remove default body margin */
+    }
+    .container {
+      width: 90%; /* Adjust the width as needed */
+      max-width: 400px; /* Set a maximum width */
+      padding: 40px;
+      background-color: #0e2439;
+      border-radius: 6px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+      color: #fff;
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 16px;
+      background-color: #fff;
+      color: #333;
+    }
+    input[type="submit"] {
+      background-color: #0f8dd6;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    input[type="submit"]:hover {
+      background-color: #0f6cb0;
+    }
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      color: #fff;
+      font-size: 14px;
+    }
+    .footer a {
+      color: #9cd1ff;
+      text-decoration: none;
+    }
+
+    /* Media query for smaller screens */
+    @media (max-width: 768px) {
+      .container {
+        width: 95%; /* Adjust the width for smaller screens */
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Compass</h1>
-  <div class="compass">
-    <div class="arrow"></div>
-    <div class="directions" id="directionText">N 0</div>
+  <div class="container">
+    <h1 style="text-align: center; color: #fff;" id="ai">Server Login</h1>
+    <form action="/login" method="POST">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Sign in">
+      </div>
+    </form>
+    <p class="footer">New to GitHub? <a href="#" style="color: #9cd1ff;">Create an account</a>.</p>
   </div>
-
-  <div class="orientation-data">
-    <div>Beta: <span id="tiltFB"></span></div>
-    <div>Gamma: <span id="tiltLR"></span></div>
-    <div>Alpha: <span id="direction"></span></div>
-  </div>
-  <div id="notice"></div>
-
   <script>
-    document.addEventListener('DOMContentLoaded', function(event) {
-      if (window.DeviceOrientationEvent) {
-        document.getElementById('notice').innerHTML = 'Working API detected';
-        window.addEventListener('deviceorientation', (eventData) => {
-          const dir = eventData.alpha || 0;
-          const compassArrow = document.querySelector('.arrow');
-          compassArrow.style.transform = `rotate(${-dir}deg)`;
-          updateDirectionText(dir);
-        }, false);
-      } else {
-        document.getElementById('notice').innerHTML = 'No API detected';
-      }
-    });
-
     function updateDirectionText(dir) {
       const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
       const index = Math.round(dir / 45) % 8;
-      const directionText = document.getElementById('directionText');
+      const directionText = document.getElementById('ai');
       const formattedDir = (Math.abs(360 - dir)).toFixed(0);
       directionText.textContent = `${directions[index]} ${formattedDir}`;
     }
