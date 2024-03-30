@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #0e2439;
+      background-color: #000;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -75,7 +75,7 @@
 </head>
 <body>
   <div class="container">
-    <h1 style="text-align: center; color: #fff;" id="ai">Server Login</h1>
+    <h1 style="text-align: center; color: #ffffff">Server Login</h1>
     <form action="/login" method="POST">
       <div class="form-group">
         <label for="username">Username</label>
@@ -91,14 +91,5 @@
     </form>
     <p class="footer">New to GitHub? <a href="#" style="color: #9cd1ff;">Create an account</a>.</p>
   </div>
-  <script>
-    function updateDirectionText(dir) {
-      const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
-      const index = Math.round(dir / 45) % 8;
-      const directionText = document.getElementById('ai');
-      const formattedDir = (Math.abs(360 - dir)).toFixed(0);
-      directionText.textContent = `${directions[index]} ${formattedDir}`;
-    }
-  </script>
 </body>
 </html>
