@@ -31,7 +31,6 @@
     document.getElementById('emailForm').addEventListener('submit', function(event) {
         event.preventDefault();
         
-        // Validate email address
         const emailInput = document.getElementById('email');
         const email = emailInput.value;
         if (!isValidEmail(email)) {
@@ -39,13 +38,12 @@
             return;
         }
         
-        // Send email
         const serviceID = 'service_epypg5b';
         const templateID = 'template_mu3ktkt';
         const templateParams = {
             to_email: email,
             to_name: email,
-            from_name: 'OpenAI GPT-3.5',
+            from_name: 'MKR Computer Laboratory',
             message: 'MIGUELCw21bXtP2a=='
         };
 
@@ -58,7 +56,6 @@
     });
 
     function isValidEmail(email) {
-        // Basic email validation using regular expression
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     }
