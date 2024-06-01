@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Code</title>
+<link rel="icon" href="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png" type="image/x-icon">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="login-box">
+        <h2>Request Login code</h2>
+        <form id="emailForm">
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+            <button type="submit">Submit</button>
+        </form>
+		<h1 class="leading-text">The login code are sent immediately.<br />
+		Please check your inbox or spam.</h1>
+		<p id="footer-text">Your request was sent to: Miguel Karlo Romero</p>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function(){
+        emailjs.init("XMCfM8h_mpWGMjBft");
+    })();
+
+    document.getElementById('emailForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Validate email address
+        const emailInput = document.getElementById('email');
+        const email = emailInput.value;
+        if (!isValidEmail(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+        
+        // Send email
+        const serviceID = 'service_epypg5b';
+        const templateID = 'template_mu3ktkt';
+        const templateParams = {
+            to_email: email,
+            to_name: email,
+            from_name: 'OpenAI GPT-3.5',
+            message: '65535'
+        };
+
+        emailjs.send(serviceID, templateID, templateParams)
+            .then(function(response) {
+                alert('Request sent successfully!');
+            }, function(error) {
+                alert('Failed to send request!');
+            });
+    });
+
+    function isValidEmail(email) {
+        // Basic email validation using regular expression
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+</script>
+</body>
+</html>
