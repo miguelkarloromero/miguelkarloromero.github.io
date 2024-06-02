@@ -1,1 +1,1 @@
-$\sqrt{\pi\text{r}^2}$
+$$\text{Hello, From server!}$$
