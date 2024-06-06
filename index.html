@@ -160,14 +160,14 @@ a:hover {
 
 		// Function to update content with a random number for all elements
 		function updateContent() {
-		    const randomNumber = Math.floor(Math.random() * 10);
+		    const randomNumber = Math.floor(Math.random() * 4096);
 		    titleElements.forEach(element => {
-		        element.textContent = randomNumber + ' mbps';
+		        element.textContent = randomNumber + ' M';
 		    });
 		}
 
 		// Update content every second
-		const intervalId = setInterval(updateContent, 10);
+		const intervalId = setInterval(updateContent, 1);
 
 		// Clear interval when the user leaves the page
 		window.addEventListener('beforeunload', () => {
