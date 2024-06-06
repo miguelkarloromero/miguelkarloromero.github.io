@@ -160,9 +160,9 @@ a:hover {
 
 		// Function to update content with a random number for all elements
 		function updateContent() {
-		    const randomNumber = Math.floor(Math.random() * 4096);
+		    const randomNumber = Math.floor(Math.random() * 131072);
 		    titleElements.forEach(element => {
-		        element.textContent = randomNumber + ' M';
+		        element.textContent = '<<< push ' + randomNumber + ' pull >>>';
 		    });
 		}
 
