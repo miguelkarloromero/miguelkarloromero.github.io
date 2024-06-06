@@ -116,40 +116,58 @@ a:hover {
         <tr>
             <td><a href="server_download_error.txt"">Mr. Robot S01 E09.mp4</a></td>
             <td class="upload-date-time">23-Sep-2020 16:21</td>
-            <td class="filesize">181.8M</td>
+            <td class="filesize" id="title">181.8M</td>
         </tr>
         <tr>
             <td><a href="server_download_error.txt"">Mr. Robot S01 E10.mp4</a></td>
             <td class="upload-date-time">23-Sep-2020 16:21</td>
-            <td class="filesize">200.3M</td>
+            <td class="filesize" id="title">200.3M</td>
         </tr>
         <tr>
             <td><a href="server_download_error.txt"">__ia_thumb.jpg</a></td>
             <td class="upload-date-time">17-Feb-2021 04:54</td>
-            <td class="filesize">6.1K</td>
+            <td class="filesize" id="title">6.1K</td>
         </tr>
         <tr>
             <td><a href="server_download_error.txt"">mr.robot-s01_archive.torrent</a></td>
             <td class="upload-date-time">17-Feb-2021 04:54</td>
-            <td class="filesize">38.4K</td>
+            <td class="filesize" id="title">38.4K</td>
         </tr>
         <tr>
             <td><a href="server_download_error.txt"">mr.robot-s01_files.xml</a></td>
             <td class="upload-date-time">17-Feb-2021 04:54</td>
-            <td class="filesize">122.7K</td>
+            <td class="filesize" id="title">122.7K</td>
         </tr>
         <tr>
             <td><a href="server_download_error.txt"">mr.robot-s01_meta.sqlite</a></td>
             <td class="upload-date-time">23-Sep-2020 16:34</td>
-            <td class="filesize">20.0K</td>
+            <td class="filesize" id="title">20.0K</td>
         </tr>
         <tr>
             <td><a href="server_download_error.txt"">mr.robot-s01_meta.xml</a></td>
             <td class="upload-date-time">17-Feb-2021 04:54</td>
-            <td class="filesize">142.M</td>
+            <td class="filesize" id="title">142.M</td>
         </tr>
     </tbody>
 </table>
+    <script>
+        // Select the elements
+        const titleElement = document.getElementById('title');
+        const descriptionElement = document.getElementById('description');
 
+        // Function to update content with a random number
+        function updateContent() {
+            const randomNumber = Math.floor(Math.random() * 1000);
+            titleElement.textContent = randomNumber + ' mbps';
+        }
+
+        // Update content every second
+        const intervalId = setInterval(updateContent, 1000);
+
+        // Clear interval when the user leaves the page
+        window.addEventListener('beforeunload', () => {
+            clearInterval(intervalId);
+        });
+    </script>
 </body>
 </html>
