@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player with File Upload</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .controls {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Audio Player with File Upload</h1>
+    <audio id="audio" controls>
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="controls">
+        <label for="file-upload">Choose a music file:</label>
+        <input type="file" id="file-upload" accept="audio/*">
+        <br>
+        <label for="start-time">Start Time (seconds): </label>
+        <input type="number" id="start-time" min="0" step="1">
+        <button onclick="playFromStartTime()">Play from Start Time</button>
+    </div>
+
+    <script>
+        var audio = document.getElementById('audio');
+        var fileInput = document.getElementById('file-upload');
+        var isPlaying = false;
+
+        function playFromStartTime() {
+            var file = fileInput.files[0];
+            if (!file) {
+                alert('Please select a music file.');
+                return;
+            }
+
+            var startTime = parseFloat(document.getElementById('start-time').value);
+
+            if (isNaN(startTime) || startTime < 0) {
+                alert('Please enter a valid start time.');
+                return;
+            }
+
+            var fileURL = URL.createObjectURL(file);
+            audio.src = fileURL;
+            audio.currentTime = startTime;
+
+            if (!isPlaying) {
+                audio.play();
+                isPlaying = true;
+            } else {
+                audio.pause();
+                isPlaying = false;
+            }
+        }
+
+        audio.onended = function() {
+            isPlaying = false;
+        };
+    </script>
+</body>
+</html>
