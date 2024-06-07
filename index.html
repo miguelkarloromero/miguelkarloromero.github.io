@@ -82,98 +82,74 @@ a:hover {
         <tr>
             <td><a href="server_download_error.txt"">Mr. Robot S01 E02.mp4</a></td>
             <td class="upload-date-time">23-Sep-2020 16:12</td>
-            <td class="filesize" id="content0x1">174.6M</td>
+            <td class="filesize">174.6M</td>
         </tr>
         <tr>
             <td><a href="server_download_error.txt"">Mr. Robot S01 E03.mp4</a></td>
             <td class="upload-date-time">23-Sep-2020 16:12</td>
-            <td class="filesize" id="content0x2">167.2M</td>
+            <td class="filesize">167.2M</td>
         </tr>
         <tr>
             <td><a href="server_download_error.txt"">Mr. Robot S01 E04.mp4</a></td>
             <td class="upload-date-time">23-Sep-2020 16:13</td>
-            <td class="filesize" id="content0x3">167.1M</td>
+            <td class="filesize">167.1M</td>
         </tr>
         <tr>
             <td><a href="server_download_error.txt"">Mr. Robot S01 E05.mp4</a></td>
             <td class="upload-date-time">23-Sep-2020 16:20</td>
-            <td class="filesize" id="content0x4">165.8M</td>
+            <td class="filesize">165.8M</td>
         </tr>
         <tr>
             <td><a href="server_download_error.txt"">Mr. Robot S01 E06.mp4</a></td>
             <td class="upload-date-time">23-Sep-2020 16:20</td>
-            <td class="filesize" id="content0x5">165.4M</td>
+            <td class="filesize">165.4M</td>
         </tr>
         <tr>
             <td><a href="server_download_error.txt"">Mr. Robot S01 E07.mp4</a></td>
             <td class="upload-date-time">23-Sep-2020 16:20</td>
-            <td class="filesize" id="content0x6">166.5M</td>
+            <td class="filesize">166.5M</td>
         </tr>
         <tr>
             <td><a href="server_download_error.txt"">Mr. Robot S01 E08.mp4</a></td>
             <td class="upload-date-time">23-Sep-2020 16:20</td>
-            <td class="filesize" id="content0x7">167.0M</td>
+            <td class="filesize">167.0M</td>
         </tr>
         <tr>
             <td><a href="server_download_error.txt"">Mr. Robot S01 E09.mp4</a></td>
             <td class="upload-date-time">23-Sep-2020 16:21</td>
-            <td class="filesize" id="content0x8">181.8M</td>
+            <td class="filesize">181.8M</td>
         </tr>
         <tr>
             <td><a href="server_download_error.txt"">Mr. Robot S01 E10.mp4</a></td>
             <td class="upload-date-time">23-Sep-2020 16:21</td>
-            <td class="filesize" id="content0x9">200.3M</td>
+            <td class="filesize">200.3M</td>
         </tr>
         <tr>
             <td><a href="server_download_error.txt"">__ia_thumb.jpg</a></td>
             <td class="upload-date-time">17-Feb-2021 04:54</td>
-            <td class="filesize" id="content0x10">6.1K</td>
+            <td class="filesize">6.1K</td>
         </tr>
         <tr>
             <td><a href="server_download_error.txt"">mr.robot-s01_archive.torrent</a></td>
             <td class="upload-date-time">17-Feb-2021 04:54</td>
-            <td class="filesize" id="content0x11">38.4K</td>
+            <td class="filesize">38.4K</td>
         </tr>
         <tr>
             <td><a href="server_download_error.txt"">mr.robot-s01_files.xml</a></td>
             <td class="upload-date-time">17-Feb-2021 04:54</td>
-            <td class="filesize" id="content0x12">122.7K</td>
+            <td class="filesize">122.7K</td>
         </tr>
         <tr>
             <td><a href="server_download_error.txt"">mr.robot-s01_meta.sqlite</a></td>
             <td class="upload-date-time">23-Sep-2020 16:34</td>
-            <td class="filesize" id="content0x13">20.0K</td>
+            <td class="filesize">20.0K</td>
         </tr>
         <tr>
             <td><a href="server_download_error.txt"">mr.robot-s01_meta.xml</a></td>
             <td class="upload-date-time">17-Feb-2021 04:54</td>
-            <td class="filesize" id="content0x14">142.M</td>
+            <td class="filesize">142.M</td>
         </tr>
     </tbody>
 </table>
-<script>
-		// Select all elements with ids content0x1 to content0x14
-		const titleElements = [];
-		for (let i = 1; i <= 14; i++) {
-		    const element = document.getElementById('content0x' + i);
-		    titleElements.push(element);
-		}
-
-		// Function to update content with a random number for all elements
-		function updateContent() {
-		    const randomNumber = Math.floor(Math.random() * 131072);
-		    titleElements.forEach(element => {
-		        element.textContent = '<<< push ' + randomNumber + ' pull >>>';
-		    });
-		}
-
-		// Update content every second
-		const intervalId = setInterval(updateContent, 1);
-
-		// Clear interval when the user leaves the page
-		window.addEventListener('beforeunload', () => {
-		    clearInterval(intervalId);
-		});
-</script>
 </body>
 </html>
