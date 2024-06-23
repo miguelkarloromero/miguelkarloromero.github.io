@@ -1,0 +1,12 @@
+---LOG---
+[Server reply]
+
+Access denied!
+
+errorCS1{
+    "access token":"not registered",
+    "not a robot":"true",
+    "keep alive":"false",
+    "access":"blocked"
+}
+---End LOG---
